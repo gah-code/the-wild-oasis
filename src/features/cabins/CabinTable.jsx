@@ -2,15 +2,17 @@ import styled from 'styled-components';
 import Spinner from '../../ui/Spinner';
 import CabinRow from './CabinRow';
 import { useCabins } from './useCabins';
+import Table from '../../ui/Table';
+import Menus from '../../ui/Menus';
 
-const Table = styled.div`
-  border: 1px solid var(--color-grey-200);
+// const Table = styled.div`
+//   border: 1px solid var(--color-grey-200);
 
-  font-size: 1.4rem;
-  background-color: var(--color-grey-0);
-  border-radius: 7px;
-  overflow: hidden;
-`;
+//   font-size: 1.4rem;
+//   background-color: var(--color-grey-0);
+//   border-radius: 7px;
+//   overflow: hidden;
+// `;
 
 const TableHeader = styled.header`
   display: grid;
@@ -27,22 +29,46 @@ const TableHeader = styled.header`
   padding: 1.6rem 2.4rem;
 `;
 
+// function CabinTable() {
+//   const { isPending, cabins } = useCabins();
+//   if (isPending) return <Spinner />;
+//   return (
+//     <Table role='table'>
+//       <TableHeader role='row'>
+//         <div className=''></div>
+//         <div className=''>Cabin</div>
+//         <div className=''>Capacity</div>
+//         <div className=''>Price</div>
+//         <div className=''>Discount</div>
+//       </TableHeader>
+//       {cabins.map((cabin) => (
+//         <CabinRow cabin={cabin} key={cabin.id} />
+//       ))}
+//     </Table>
+//   );
+// }
+
+// export default CabinTable;
+
 function CabinTable() {
   const { isPending, cabins } = useCabins();
   if (isPending) return <Spinner />;
   return (
-    <Table role='table'>
-      <TableHeader role='row'>
-        <div className=''></div>
-        <div className=''>Cabin</div>
-        <div className=''>Capacity</div>
-        <div className=''>Price</div>
-        <div className=''>Discount</div>
-      </TableHeader>
-      {cabins.map((cabin) => (
-        <CabinRow cabin={cabin} key={cabin.id} />
-      ))}
-    </Table>
+    <Menus>
+      <Table columns='0.6fr 1.8fr 2.2fr 1fr 1fr 1fr'>
+        <Table.Header>
+          <div className=''></div>
+          <div className=''>Cabin</div>
+          <div className=''>Capacity</div>
+          <div className=''>Price</div>
+          <div className=''>Discount</div>
+        </Table.Header>
+        <Table.Body
+          data={cabins}
+          render={(cabin) => <CabinRow cabin={cabin} key={cabin.id} />}
+        />
+      </Table>
+    </Menus>
   );
 }
 
