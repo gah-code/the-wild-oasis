@@ -1,7 +1,8 @@
 import React from 'react';
+import BookingDetail from '../features/bookings/BookingDetail';
 
 function Booking() {
-  return <div>Booking</div>;
+  return <BookingDetail />;
 }
 
 export default Booking;
