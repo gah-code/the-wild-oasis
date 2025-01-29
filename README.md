@@ -230,4 +230,6 @@ React Query is used for efficient server-state management, ensuring seamless dat
 
 - [date-fns Documentation](https://date-fns.org/docs/Getting-Started)
 
-![Screen Capture](./cabin-booking-project.png)
+![React Portal](./Modal-Window-React-Portal.png)
+![React Filtering ](./Client-Side-Filtering-Cabins.png)
+![React Sorting ](./Client-Side-Sorting-Cabins.png)
