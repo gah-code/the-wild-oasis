@@ -1,6 +1,6 @@
 # The Wild Oasis
 
-A comprehensive project combining modern web development technologies and tools to create a full-featured application.
+A comprehensive project combining modern web development technologies and tools to create a full-featured internal hotel management application.
 
 ---
 
@@ -17,13 +17,14 @@ A comprehensive project combining modern web development technologies and tools 
    - [Styled Components](#styled-components)
    - [Creating a Database with Supabase](#creating-a-database-with-supabase)
    - [React Query: Managing Remote State](#react-query-managing-remote-state)
-7. [Additional Resources](#additional-resources)
+7. [Project Requirements](#project-requirements)
+8. [Additional Resources](#additional-resources)
 
 ---
 
 ## Overview
 
-The Wild Oasis project is a feature-rich web application leveraging React, Redux, Supabase, and other modern tools to create an engaging and efficient user experience. This application includes dynamic routing, state management, and a custom database backend.
+The Wild Oasis is a boutique hotel with eight luxurious wooden cabins. This project is a custom-built internal management application that allows hotel employees to handle bookings, cabins, and guests. The app is designed with an intuitive UI and robust backend integration to streamline operations.
 
 ---
 
@@ -36,17 +37,54 @@ The Wild Oasis project is a feature-rich web application leveraging React, Redux
 - **Supabase**: Backend services for database, authentication, and storage.
 - **React Query**: Remote state management and data fetching.
 - **Vite**: Fast build tool and development server.
+- **React Hook Form**: Form management for smooth user interactions.
+- **Recharts**: Data visualization library for dashboards.
+- **date-fns**: Utility library for handling dates.
+- **React Icons & React Hot Toast**: UI enhancements for notifications and icons.
 
 ---
 
 ## Features
 
-- User authentication and profile management.
-- Dynamic and nested routing.
-- Database interactions for bookings, cabins, and guests.
-- Secure and scalable storage solutions.
-- Custom charts and dashboard layouts.
-- Responsive design for all devices.
+### Authentication
+
+- Only hotel employees can access the application.
+- Users must be logged in to perform actions.
+- New users can be signed up only inside the application.
+- Users can upload an avatar and update their profile information.
+
+### Cabins Management
+
+- View a list of all cabins with details (photo, name, capacity, price, discount).
+- Create, update, and delete cabins.
+- Upload photos for cabins.
+
+### Bookings Management
+
+- View and manage hotel bookings.
+- Filter bookings by status: “unconfirmed,” “checked-in,” “checked-out.”
+- Track booking details, including guests, nights, breakfast options, and payment status.
+
+### Check-In / Check-Out
+
+- Check guests in and out with a simple interface.
+- Accept payment during check-in and confirm payment status.
+- Allow guests to add breakfast for their entire stay upon check-in.
+
+### Guest Management
+
+- Store guest details: full name, email, national ID, nationality, and country flag.
+
+### Dashboard
+
+- View daily check-ins and check-outs.
+- Monitor recent bookings, sales, and occupancy rates.
+- Visualize hotel performance with sales and stay duration charts.
+
+### Settings
+
+- Configure global settings such as breakfast price, minimum/maximum booking nights, and max guests per booking.
+- Enable dark mode for a customizable user experience.
 
 ---
 
@@ -202,27 +240,23 @@ The Wild Oasis project is a feature-rich web application leveraging React, Redux
 
 ### React Router with Data Loading
 
-React Router is used to implement dynamic routing, enabling smooth navigation and efficient data fetching for each route.
+- Enables dynamic routing and data-driven navigation.
 
-### Adding Redux and Advanced React Router
+### Redux and Advanced React Router
 
-Redux is integrated to manage complex application state, while advanced React Router features allow for nested routes and data-driven navigation.
+- Manages complex application state and enhances routing features.
 
 ### Styled Components
 
-Styled Components facilitate a modular approach to styling, allowing for reusable and maintainable CSS-in-JS.
+- Provides modular styling solutions for a scalable UI.
 
-### Creating a Database with Supabase
+### Supabase for Database & Authentication
 
-Supabase provides a fully-featured backend with:
+- Manages user authentication, data storage, and security policies.
 
-- Table creation and relationships.
-- Security policies (RLS) to protect data.
-- Storage buckets for managing assets.
+### React Query for Remote State Management
 
-### React Query: Managing Remote State
-
-React Query is used for efficient server-state management, ensuring seamless data fetching, caching, and synchronization.
+- Optimizes server-state management with caching and background updates.
 
 ---
 
@@ -231,5 +265,5 @@ React Query is used for efficient server-state management, ensuring seamless dat
 - [date-fns Documentation](https://date-fns.org/docs/Getting-Started)
 
 ![React Portal](./Modal-Window-React-Portal.png)
-![React Filtering ](./Client-Side-Filtering-Cabins.png)
-![React Sorting ](./Client-Side-Sorting-Cabins.png)
+![React Filtering](./Client-Side-Filtering-Cabins.png)
+![React Sorting](./Client-Side-Sorting-Cabins.png)
