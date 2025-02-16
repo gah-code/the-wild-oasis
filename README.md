@@ -206,6 +206,50 @@ The Wild Oasis is a boutique hotel with eight luxurious wooden cabins. This proj
 
 ---
 
+## Interface
+
+## Home Page - Dashboard
+
+![Home Page Dashboard](./docs/home-dashboard.png)
+
+### Dark Mode
+
+![Home Page Dashboard Dark Mode](./docs/home-dashboard-dark-mode.png)
+
+## Booking Page
+
+![Booking Page](./docs/bookings.png)
+
+### Booking Details
+
+![See Booking Details](./docs/bookings-see-details.png)
+
+## Cabins Page
+
+![Cabins Page](./docs/cabins.png)
+
+### Edit
+
+![Edit Cabin](./docs/cabins-edit.png)
+
+### Create
+
+![Create Cabin](./docs/create-cabin.png)
+
+## Create User
+
+![Create User](./docs/create-user.png)
+
+### Profile
+
+![Update User Account Profile](./docs/account-update-profile.png)
+
+## Settings
+
+![Settings Page](./docs/settings.png)
+
+---
+
 ## Setup Instructions
 
 1. Clone the repository:
@@ -263,7 +307,3 @@ The Wild Oasis is a boutique hotel with eight luxurious wooden cabins. This proj
 ## Additional Resources
 
 - [date-fns Documentation](https://date-fns.org/docs/Getting-Started)
-
-![React Portal](./Modal-Window-React-Portal.png)
-![React Filtering](./Client-Side-Filtering-Cabins.png)
-![React Sorting](./Client-Side-Sorting-Cabins.png)
